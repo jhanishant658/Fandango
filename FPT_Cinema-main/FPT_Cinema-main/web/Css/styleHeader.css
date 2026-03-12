@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: __Montserrat_cabfd8,__Montserrat_Fallback_cabfd8;
+
+}
+/*header*/
+.navbar1 {
+    background: linear-gradient(to right, #2a2727, #31302b);
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 18;
+    opacity: 0.97;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo1 img {
+    height: 45px;
+    margin-left: 15px;
+}
+
+.main-nav1 a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 4rem;
+    font-size: 20px;
+}
+.main-nav1 a:hover {
+    color: #f00;
+}
+
+.auth-btn1 button {
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.register1 {
+    background: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.login1 {
+    background: linear-gradient(210deg, #993434, #ff000e);
+    color:white;
+    border: none;
+}
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #020817;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 10px;
+}
+.dropdown-title1{
+    display: flex;
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-content1 a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content1 a:hover {
+    color:red;
+}
+
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+}
+.username1{
+    margin-right:30px;
+    font-size: 18px;
+    margin-top:4px
+}
+
+/*.search-form {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-left: auto;  Moves the search bar to the right 
+}
+
+.search-form input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e30713;
+    padding: 5px;
+}
+
+.search-form button:hover {
+    color: #fe6969;
+}*/
+
+
+/* Update the search-form styling with transparent theme */
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content when collapsed */
+  background: transparent;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 0 30px 0 auto;
+  width: 40px; /* Start with just enough width for the icon */
+/*  height: 40px;  Fixed height for better centering */
+  overflow: hidden;
+  transition: all 0.3s ease;
+/*  border: 1px solid rgba(255, 255, 255, 0.2);  Subtle border */
+}
+
+/* Hide the input initially */
+.search-form input {
+  border: none;
+  outline: none;
+  padding: 1px;
+  font-size: 16px;
+  width: 0;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  background: transparent;
+  color: white; /* Text color for dark background */
+}
+
+/* Style for the button */
+.search-form button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white; /* Icon color to match the theme */
+  padding: 5px;
+  min-width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect to expand the search form */
+.search-form:hover {
+  width: 250px;
+  justify-content: flex-start; /* Align to start when expanded */
+  background: rgba(255, 255, 255, 0.1); /* Slight highlight on hover */
+}
+
+/* Show the input on hover */
+.search-form:hover input {
+  width: 200px;
+  opacity: 1;
+}
+
+/* Placeholder text color */
+.search-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-form button:hover {
+  color: #fe6969;
+}
+
+/* Center the material icon */
+.search-form .material-symbols-outlined {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
