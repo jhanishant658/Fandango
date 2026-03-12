@@ -73,7 +73,16 @@ public class AdminEditRoom extends HttpServlet {
         String name = request.getParameter("name");
         int capacity = Integer.parseInt(request.getParameter("capacity"));
         PrintWriter out = response.getWriter();
-   
+        if(name == null || name.trim().isEmpty()) {
+    request.setAttribute("error", "Name cannot be empty");
+    doGet(request, response);
+    return;
+}
+        if (capacity <= 0) {
+    request.setAttribute("error", "Capacity must be greater than 0");
+    doGet(request, response);
+    return;
+}
         Object iu = request.getParameter("btnInUp");
         boolean checkUpdate = false;
         for (Room r : RoomDAO.INSTANCE.getListRoom()) {
